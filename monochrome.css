@@ -1,0 +1,172 @@
+html[data-theme='dark'] body.app-shell {
+	--bg: #090909;
+	--surface: #151515;
+	--surface-soft: #202020;
+	--line: #404040;
+	--ink: #f5f5f5;
+	--muted: #a3a3a3;
+	--blue: #e5e5e5;
+	--purple: #bdbdbd;
+	--pink: #999;
+	--orange: #f0f0f0;
+	--cyan: #d6d6d6;
+	color: var(--ink);
+	background: radial-gradient(ellipse at 78% 8%, #ffffff12, transparent 32%), linear-gradient(145deg, #080808, #171717 58%, #101010);
+}
+
+html[data-theme='light'] body.app-shell {
+	--bg: #f1f1f1;
+	--surface: #fff;
+	--surface-soft: #e7e7e7;
+	--line: #c8c8c8;
+	--ink: #171717;
+	--muted: #666;
+	--blue: #222;
+	--purple: #555;
+	--pink: #777;
+	--orange: #222;
+	--cyan: #444;
+	color: var(--ink);
+	background: radial-gradient(ellipse at 78% 8%, #0000000a, transparent 32%), linear-gradient(145deg, #f7f7f7, #e8e8e8 58%, #f2f2f2);
+}
+
+body.app-shell .ambient-one,
+body.app-shell .ambient-two {
+	background: #fff;
+	opacity: .07;
+}
+
+body.app-shell .shape-field {
+	filter: grayscale(1);
+	opacity: .45;
+}
+
+body.app-shell .brand-mark,
+body.app-shell .ai-orb {
+	background: linear-gradient(145deg, #555, #111);
+	border-color: #ffffff55;
+	box-shadow: 0 0 22px #ffffff1a;
+}
+
+html[data-theme='light'] body.app-shell .brand-mark,
+html[data-theme='light'] body.app-shell .ai-orb {
+	background: linear-gradient(145deg, #333, #090909);
+	border-color: #222;
+	color: #fff;
+}
+
+body.app-shell .primary-btn,
+body.app-shell .generate-btn {
+	background: linear-gradient(110deg, #555, #111);
+	box-shadow: 0 10px 28px #0005;
+}
+
+html[data-theme='light'] body.app-shell .primary-btn,
+html[data-theme='light'] body.app-shell .generate-btn {
+	background: linear-gradient(110deg, #333, #080808);
+	color: #fff;
+}
+
+body.app-shell .hero-art {
+	filter: grayscale(1);
+}
+
+body.app-shell .accent-card {
+	background: linear-gradient(145deg, #292929, #111);
+	border-color: #666;
+}
+
+html[data-theme='light'] body.app-shell .accent-card {
+	background: linear-gradient(145deg, #222, #090909);
+	border-color: #222;
+	color: #fff;
+}
+
+body.app-shell .generation-error {
+	border-color: #888;
+	background: #ffffff0a;
+	color: var(--ink);
+}
+
+body.app-shell .generation-error button {
+	border-color: #888;
+	color: var(--ink);
+}
+
+html[data-theme='light'] body.app-shell .generation-error {
+	background: #00000008;
+}
+
+body.app-shell .brand-mark,
+body.app-shell .ai-orb,
+body.app-shell .primary-btn,
+body.app-shell .generate-btn,
+body.app-shell .assistant-fab {
+	background: linear-gradient(115deg, #24c6c8, #5178ed, #c75bd7, #f07668, #e5b94d, #24c6c8);
+	background-size: 300% 300%;
+	animation: colorDrift 12s ease-in-out infinite;
+}
+
+body.app-shell .primary-btn,
+body.app-shell .generate-btn {
+	color: #fff;
+	box-shadow: 0 10px 28px #0005, 0 0 22px #587bea35;
+}
+
+body.app-shell .hero-copy h1 em,
+body.app-shell .studio-heading h2 em {
+	background: linear-gradient(100deg, #24c6c8, #5178ed, #c75bd7, #f07668, #e5b94d, #24c6c8);
+	background-size: 300% auto;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: colorDrift 12s ease-in-out infinite;
+}
+
+html[data-theme] body.app-shell .brand-mark,
+html[data-theme] body.app-shell .ai-orb,
+html[data-theme] body.app-shell .primary-btn,
+html[data-theme] body.app-shell .generate-btn,
+html[data-theme] body.app-shell .assistant-fab {
+	background: linear-gradient(115deg, #24c6c8, #5178ed, #c75bd7, #f07668, #e5b94d, #24c6c8);
+	background-size: 300% 300%;
+}
+
+html[data-theme] body.app-shell .glass-card {
+	background: linear-gradient(135deg, #ffffff12, #ffffff04 48%, #ffffff08);
+}
+
+html[data-theme='light'] body.app-shell .glass-card {
+	background: linear-gradient(135deg, #fff, #f1f1f1 48%, #e5e5e5);
+}
+
+body.app-shell .feature-index,
+body.app-shell .hero-note span,
+body.app-shell .strip-arrow {
+	color: #61b8d0;
+	animation: accentHue 16s linear infinite;
+}
+
+@keyframes colorDrift {
+	0%, 100% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+}
+
+@keyframes accentHue {
+	to { filter: hue-rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body.app-shell .brand-mark,
+	body.app-shell .ai-orb,
+	body.app-shell .primary-btn,
+	body.app-shell .generate-btn,
+	body.app-shell .assistant-fab,
+	body.app-shell .hero-copy h1 em,
+	body.app-shell .studio-heading h2 em,
+	body.app-shell .feature-index,
+	body.app-shell .hero-note span,
+	body.app-shell .strip-arrow {
+		animation: none;
+	}
+}
